@@ -1,2 +1,2 @@
 # bootstrap-sass-build-lint
-Card 3 column layout using Bootstrap, SASS, and build and linting tools
+Card 3 column layout using Bootstrap and SASS with buttons bottom aligned by Flex.  Used Gulp and NPM build and linting tools.
