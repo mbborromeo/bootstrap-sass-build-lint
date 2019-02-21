@@ -1,0 +1,136 @@
+//https://getbootstrap.com/docs/4.2/getting-started/theming/
+
+// Custom.scss
+//With that setup in place, you can begin to modify any of the Sass variables and maps in your custom.scss. 
+//You can also start to add parts of Bootstrap under the // Optional section as needed. 
+//We suggest using the full import stack from our bootstrap.scss file as your starting point.
+
+
+// Variable overrides within the same Sass file can come before or after the default variables. 
+// However, when overriding across Sass files, your overrides must come before you import Bootstrap’s Sass files.
+// $body-bg: #000;
+// $body-color: #FFF;
+
+
+
+
+//From: https://getbootstrap.com/docs/4.2/examples/pricing/pricing.css
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.container {
+  max-width: 960px;
+}
+
+.pricing-header {
+  max-width: 700px;
+}
+
+.card-deck .card {
+  min-width: 220px;
+}
+
+
+
+// Option A: Include all of Bootstrap
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+//OR
+// // Option B: Include parts of Bootstrap
+
+// // Required
+// @import "../node_modules/bootstrap/scss/functions";
+// @import "../node_modules/bootstrap/scss/variables";
+// @import "../node_modules/bootstrap/scss/mixins";
+
+// // Optional
+// @import "../node_modules/bootstrap/scss/reboot";
+// @import "../node_modules/bootstrap/scss/type";
+// @import "../node_modules/bootstrap/scss/images";
+// @import "../node_modules/bootstrap/scss/code";
+// @import "../node_modules/bootstrap/scss/grid";
+
+
+// Author's Custom styles
+.col-left {
+  background-color: $orange;
+}
+
+.col-mid {
+  background-color: $blue;
+}
+
+.col-right {
+  background-color: $purple;
+}
+
+.btn {
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  background-color: transparent;
+  border-color: $white;
+
+  &:hover {
+    @extend .btn-primary;
+    background-color: $gray-600;    
+  }
+}
+
+.btn-secondary {
+  background-color: $gray-600;
+  border-color: $black;
+  color: $black;
+  display: block;
+  margin: 0 auto;
+  padding: 0.8em 2em;  
+  
+  &:hover {
+    @extend .btn-secondary;
+    background-color: $green;
+  }
+}
+
+.card-body {
+  color: $white;
+  display: flex;
+  align-items: baseline; /* keep left aligned */
+  flex-direction: column; /* up to down */  
+  justify-content: space-around; /* spread space vertically */
+  
+  .btn-primary {
+    margin-top: auto; /* push to bottom */
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.card-header {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-bottom: none;  
+}
+
+.card-deck .card {
+  /* Mobile First view: 1-column layout */
+  -ms-flex: unset;
+  flex: unset;
+}
+
+// Media Queries >576px, 633
+@include media-breakpoint-up(lg) {
+  .card-deck .card {
+    /* Desktop view: 3-column layout */
+    -ms-flex: 1 1 0;
+    flex: 1 1 0;
+  }
+}
+
