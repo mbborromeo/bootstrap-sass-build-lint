@@ -5,13 +5,10 @@
 //You can also start to add parts of Bootstrap under the // Optional section as needed. 
 //We suggest using the full import stack from our bootstrap.scss file as your starting point.
 
-
 // Variable overrides within the same Sass file can come before or after the default variables. 
 // However, when overriding across Sass files, your overrides must come before you import Bootstrap’s Sass files.
 // $body-bg: #000;
 // $body-color: #FFF;
-
-
 
 
 //From: https://getbootstrap.com/docs/4.2/examples/pricing/pricing.css
@@ -35,7 +32,6 @@ html {
 .card-deck .card {
   min-width: 220px;
 }
-
 
 
 // Option A: Include all of Bootstrap
