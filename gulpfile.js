@@ -37,7 +37,7 @@ function styles() {
 function scripts() {
   return gulp.src([ './src/js/**/*.js', 
                     './node_modules/jquery/jquery.js', 
-                    './node_modules/popper.js/dist/popper.js', 
+                    './node_modules/popper.js/dist/umd/popper.js', 
                     './node_modules/bootstrap/dist/js/bootstrap.js' ])
     .pipe(eslint())
     .pipe(eslint.format())
